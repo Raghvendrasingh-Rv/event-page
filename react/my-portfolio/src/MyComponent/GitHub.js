@@ -32,7 +32,7 @@ function GitHub() {
                     </ul>
                 </div>
                 <div className="repo">
-                <h2>Ropesitories</h2>
+                <h2>Repositories</h2>
                  <Repos />
                 </div>
             </div>
