@@ -1,0 +1,137 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Custom Properties, update these for your own design */
+
+:root {
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+    
+    --fw-reg: 300;
+    --fw-bold: 900;
+    
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #16e0bd;
+    
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --bs:0.25em 0.25em 0.75em rgba(0,0,0,.25),
+         0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+.info h2, .repo h2{
+    background-color: var(--clr-accent);
+}
+.git{
+    height: 40vh;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+.git h1{
+    color: var(--clr-accent);
+    position: relative;
+}
+
+.git h1::after {
+    content : '';
+    display: block;
+    height: 2px;
+    width: 2em;
+    margin: 0.5em auto 1em;
+    background: var(--clr-dark);
+    opacity: 0.25;
+}
+
+.services {
+    margin-bottom: 4em;
+}
+
+.container1{
+    width: 90%;
+    height: 40vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    letter-spacing: 1px;
+}
+.img{
+    margin-left: 5vh;
+    max-width: 100px;
+}
+.img img{
+    /* margin-top: 10vh; */
+ 
+    border-radius: 50%;
+    
+}
+.info{
+    
+    width: 40%;
+    padding-top: 5vh;
+    line-height: 20px;
+    font-size: var(--ff-primary);
+
+}
+.info ul{
+    list-style-type:none;
+}
+.repo{
+    
+    width: 40%;
+    padding-top: 5vh;
+    text-transform: uppercase;
+}
+.repo ul{
+    list-style-type:none;
+}
+@media screen and (max-width:700px) {
+    .git{
+        height: 70vh;       
+        font-size: 14px;
+        /* overflow-x: hidden; */
+    }
+    .git h2 {
+        font-size: 16px;
+        text-align: center;
+    }
+    .img{
+        margin-left: 9vh;
+    }
+   .container1{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px));
+    height: 70vh;
+    text-align: left;
+    text-overflow: clip;
+    
+   }
+   .info{
+    width: 100%;
+    padding: 0.2vh;
+
+   }
+   .repo{
+    width: 100%;
+    padding: 0.2vh;
+
+   }
+}
